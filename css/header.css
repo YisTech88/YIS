@@ -1,0 +1,51 @@
+/* ==========================================================================
+   HEADER - logo, nav with services mega-menu, language + colour pickers
+   ========================================================================== */
+.hdr{position:fixed;inset:0 0 auto;z-index:60;height:var(--header-h);
+  background:color-mix(in srgb,var(--bg) 78%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.cnt{max-width:1200px;height:100%;margin:auto;padding:0 24px;display:flex;align-items:center;gap:18px}
+
+.logo{display:flex;align-items:center;gap:8px;font-weight:800;font-size:1.25rem;color:var(--logo)}
+.logo i,.logo .red{color:var(--brand-red)}
+
+.nav{margin-inline-start:auto;display:flex;align-items:center;gap:24px;font-size:.9rem}
+.nav>a,.has-menu>a{color:var(--mut);position:relative;transition:color .3s}
+.nav>a:hover,.has-menu:hover>a{color:var(--text)}
+
+/* services mega-menu */
+.has-menu{position:relative;padding-block:20px}
+.mega{position:absolute;top:100%;left:50%;width:min(420px,90vw);display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:12px;
+  background:var(--panel);border:1px solid var(--line);border-radius:14px;box-shadow:0 24px 60px rgba(0,0,0,.45);
+  opacity:0;visibility:hidden;transform:translate(-50%,10px);transition:.3s}
+.has-menu:hover .mega,.has-menu:focus-within .mega{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.mega a{display:flex;gap:10px;align-items:center;padding:10px 12px;border-radius:10px;font-size:.85rem;color:var(--text);transition:.25s}
+.mega a:hover{background:color-mix(in srgb,var(--accent) 14%,transparent)}
+.mega i{color:var(--accent);font-size:1.2rem}
+
+/* tools: language pill + colour picker */
+.tools{display:flex;align-items:center;gap:10px}
+.lang{display:flex;gap:2px;padding:3px;border:1px solid var(--line);border-radius:30px}
+.lang label{font-size:.75rem;font-weight:600;padding:2px 11px;border-radius:20px;cursor:pointer;color:var(--mut);transition:.3s}
+body:has(#l-en:checked) label[for=l-en],
+body:has(#l-de:checked) label[for=l-de],
+body:has(#l-ar:checked) label[for=l-ar]{background:var(--accent);color:var(--accent-ink)}
+
+.themes{position:relative}
+.themes summary{list-style:none;cursor:pointer;width:34px;height:34px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;color:var(--mut)}
+.themes summary::-webkit-details-marker{display:none}
+.themes summary:hover{color:var(--accent);border-color:var(--accent)}
+.swatches{position:absolute;top:calc(100% + 10px);inset-inline-end:0;display:flex;gap:8px;padding:10px;background:var(--panel);border:1px solid var(--line);border-radius:12px}
+.swatches button{width:24px;height:24px;border-radius:50%;border:2px solid transparent;background:var(--c);cursor:pointer;transition:.2s}
+.swatches button:hover{transform:scale(1.15)}
+.swatches button[aria-pressed=true]{border-color:var(--text)}
+
+.burger{display:none;order:3;font-size:1.8rem;cursor:pointer}
+
+@media(max-width:900px){
+  .burger{display:block}
+  .tools{margin-inline-start:auto}
+  .nav{position:absolute;inset:100% 0 auto;flex-direction:column;gap:16px;margin:0;padding:0 24px;max-height:0;overflow:hidden;
+    background:var(--bg);transition:.4s}
+  #menu-toggle:checked~.nav{max-height:420px;padding-block:20px}
+  .mega{display:none}
+}

@@ -1,0 +1,14 @@
+/* ==========================================================================
+   THEMES - every colour in the site comes from these variables.
+   To add a theme: copy a block, change the name + colours, then add a
+   matching <button data-theme="name"> in index.html (.swatches).
+   ========================================================================== */
+:root,[data-theme="crimson"]{          /* default: brand red + graphite */
+  --bg:#0a0c11; --bg2:#10131b; --panel:#151922; --line:#262c3a;
+  --text:#f1f4f8; --mut:#98a3b5; --logo:#ffffff;
+  --accent:#e63946; --accent-2:#b8232f; --accent-ink:#ffffff;
+}
+[data-theme="ocean"]{--bg:#050b14;--bg2:#08121f;--panel:#0b1a2b;--line:#15314a;--text:#e8f1f7;--mut:#8aa3b5;--logo:#fff;--accent:#14b8c4;--accent-2:#0e8f9b;--accent-ink:#031519}
+[data-theme="gold"]{--bg:#060d1c;--bg2:#0a152b;--panel:#0f1d38;--line:#1d3052;--text:#eef2fa;--mut:#9aa8c2;--logo:#fff;--accent:#f2b630;--accent-2:#c98f12;--accent-ink:#1a1300}
+[data-theme="emerald"]{--bg:#04120e;--bg2:#071b15;--panel:#0b241c;--line:#15402f;--text:#e9f6f0;--mut:#8fb0a2;--logo:#fff;--accent:#1fc98b;--accent-2:#119a68;--accent-ink:#021a10}
+[data-theme="light"]{--bg:#f3f5f8;--bg2:#e9edf2;--panel:#ffffff;--line:#d6dde6;--text:#0f1722;--mut:#546174;--logo:#10151c;--accent:#d62839;--accent-2:#a81d2c;--accent-ink:#ffffff}

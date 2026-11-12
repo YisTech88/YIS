@@ -1,0 +1,83 @@
+/* ==========================================================================
+   SECTIONS - about, service cards, process, footer
+   ========================================================================== */
+
+/* ---- About ---- */
+.boxes{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.box{padding:28px 22px;border-radius:14px;background:var(--panel);border:1px solid var(--line);transition:.35s}
+.box:hover{border-color:var(--accent);transform:translateY(-6px);box-shadow:0 14px 40px color-mix(in srgb,var(--accent) 16%,transparent)}
+.box i{font-size:2.2rem;color:var(--accent)}
+.box h3{margin:8px 0 4px}
+.box p{color:var(--mut);font-size:.92rem}
+
+/* ---- Service cards: hover = photos fan out, click = jump to the full section ---- */
+.cards{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.card{position:relative;overflow:hidden;display:flex;flex-direction:column;gap:6px;padding:16px 14px 20px;border-radius:12px;
+  background:var(--panel);border:1px solid var(--line);transition:.4s}
+.card:hover{transform:translateY(-8px);border-color:var(--accent);box-shadow:0 18px 50px color-mix(in srgb,var(--accent) 22%,transparent)}
+.card h3{font-size:1.05rem}
+.card p{flex:1;color:var(--mut);font-size:.82rem}
+.card>a{margin-top:6px;font-size:.85rem;font-weight:600;color:var(--accent)}
+.card>a::after{content:"";position:absolute;inset:0}          /* whole card is clickable */
+
+.thumb{position:relative;height:130px;display:grid;place-items:center;margin-bottom:8px;border-radius:8px;font-size:3.4rem;color:var(--accent);
+  background:radial-gradient(circle at 50% 120%,color-mix(in srgb,var(--accent) 45%,transparent),transparent 65%),linear-gradient(135deg,var(--bg2),var(--bg))}
+.thumb>i{position:relative;z-index:1;transition:.4s}
+.card:hover .thumb>i{opacity:.15;transform:scale(.7)}
+
+/* photo tile (used in card fan + detail mosaic). Photo = --img, fallback = gradient */
+.ph{display:block;overflow:hidden;background:var(--bg)}
+.ph::before{content:"";position:absolute;inset:0;background:var(--img,none) center/cover,linear-gradient(135deg,var(--c,#3a1a20),var(--bg))}
+.ph:nth-of-type(2){--c:#4a3d10}
+.ph:nth-of-type(3){--c:#1a2f66}
+.thumb .ph{position:absolute;top:4px;bottom:4px;left:31%;width:38%;z-index:2;border-radius:8px;opacity:0;transform:scale(.5);
+  border:1px solid rgba(255,255,255,.15);box-shadow:0 8px 22px rgba(0,0,0,.6);transition:.55s cubic-bezier(.2,.8,.2,1)}
+.card:hover .thumb .ph{opacity:1}
+.card:hover .thumb .ph:nth-of-type(1){transform:translateX(-62%) rotate(-8deg)}
+.card:hover .thumb .ph:nth-of-type(2){transform:translateY(-6px) scale(1.06);z-index:3}
+.card:hover .thumb .ph:nth-of-type(3){transform:translateX(62%) rotate(8deg)}
+
+/* ---- Process: regions, example, steps, features ---- */
+.route{display:flex;align-items:stretch;justify-content:center;gap:20px;margin:40px auto 30px;padding:30px 20px;border-radius:18px;
+  background:var(--panel);border:1px solid var(--line)}
+.rg{flex:1;max-width:340px;padding:18px;border-radius:14px;background:var(--bg2);border:1px solid var(--line)}
+.rg h4{margin-bottom:10px;color:var(--accent)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.chips span{padding:2px 11px;border-radius:20px;font-size:.78rem;background:var(--bg);border:1px solid var(--line)}
+.sea{position:relative;align-self:center;flex:1;max-width:520px;height:70px}
+.sea svg{width:100%;height:100%;overflow:visible}
+.sea .arc{fill:none;stroke:var(--accent);stroke-width:1.6;stroke-linecap:round;stroke-dasharray:6 8;animation:dash 1.5s linear infinite}
+.ship{position:absolute;top:-30px;left:0;font-size:2rem;animation:sail 7s ease-in-out infinite alternate}
+@keyframes dash{to{stroke-dashoffset:-28}}
+@keyframes sail{to{left:calc(100% - 2.4rem)}}
+
+.case{display:flex;gap:20px;align-items:center;max-width:900px;padding:22px 26px;border-radius:14px;text-align:start;background:var(--panel);border:1px solid var(--line)}
+.case i{font-size:3.4rem;color:var(--accent)}
+.case p{color:var(--mut);font-size:.95rem}
+
+.steps{display:flex;justify-content:space-between;position:relative;margin-top:46px}
+.steps::before{content:"";position:absolute;top:30px;inset-inline:10%;height:2px;background:linear-gradient(90deg,transparent,var(--accent-2),transparent)}
+.steps li{position:relative;flex:1;display:grid;justify-items:center;gap:10px;font-size:.9rem}
+.steps i{width:62px;height:62px;display:grid;place-items:center;border-radius:50%;font-size:1.5rem;background:var(--bg);border:1px solid var(--line);transition:.35s}
+.steps li:hover i,.steps .on i{border-color:var(--accent);color:var(--accent);box-shadow:0 0 25px color-mix(in srgb,var(--accent) 55%,transparent)}
+.steps .on i{animation:glow 2s ease-in-out infinite}
+@keyframes glow{50%{box-shadow:0 0 38px var(--accent)}}
+
+.sub{margin:56px auto 18px;color:var(--accent)}
+.feats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.feats li{display:grid;justify-items:center;gap:6px;padding:22px 10px;border-radius:12px;font-size:.92rem;background:var(--panel);border:1px solid var(--line);transition:.3s}
+.feats li:hover{border-color:var(--accent);transform:translateY(-4px)}
+.feats i{font-size:1.8rem;color:var(--accent)}
+
+/* ---- Footer ---- */
+.ftr{padding:22px;text-align:center;font-size:.85rem;color:var(--mut);border-top:1px solid var(--line)}
+.ftr .red{color:var(--brand-red);font-weight:700}
+
+/* ---- Responsive ---- */
+@media(max-width:1000px){.cards{grid-template-columns:repeat(2,1fr)}.feats{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){
+  .cards{grid-template-columns:1fr}
+  .steps{flex-direction:column;gap:22px}.steps::before{display:none}
+  .route{flex-direction:column}.sea{width:100%}
+  .case{flex-direction:column;text-align:center}
+}

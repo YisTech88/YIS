@@ -1,0 +1,38 @@
+/* ==========================================================================
+   CONTACT - WhatsApp cards + floating button
+   ========================================================================== */
+.wa-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;max-width:760px!important}
+.wa-card{display:flex;align-items:center;gap:16px;padding:20px 22px;border-radius:16px;text-align:start;background:var(--panel);border:1px solid var(--line);transition:.35s}
+.wa-card:hover{border-color:#25d366;transform:translateY(-4px);box-shadow:0 16px 40px rgba(37,211,102,.18)}
+.wa-card>i{font-size:2.4rem;color:#25d366}
+.wa-card b{display:block}
+.wa-card span{display:block;color:var(--mut);direction:ltr;unicode-bidi:isolate;text-align:start}
+.wa-go{margin-inline-start:auto;padding:4px 14px;border-radius:20px;font-size:.8rem;font-weight:600;background:#25d366;color:#04210f!important;direction:inherit!important}
+
+.wa-float{position:fixed;bottom:20px;inset-inline-end:20px;z-index:55;width:54px;height:54px;display:grid;place-items:center;border-radius:50%;
+  font-size:1.7rem;background:#25d366;color:#fff;box-shadow:0 10px 30px rgba(37,211,102,.45);transition:.3s}
+.wa-float:hover{transform:scale(1.1)}
+
+/* ---- people ---- */
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;max-width:900px!important;margin-bottom:26px}
+.person{display:flex;gap:16px;padding:22px;border:1px solid var(--line);border-radius:16px;text-align:start;background:var(--panel)}
+.avatar{flex:none;width:72px;height:72px;display:grid;place-items:center;border-radius:50%;font-size:1.4rem;font-weight:800;color:var(--accent-ink);
+  background:var(--img,none) center/cover,linear-gradient(135deg,var(--accent-2),var(--accent))}   /* add a photo: style="--img:url(img/team/ahmed.jpg)" */
+.person h3{font-size:1.15rem}
+.role{font-size:.82rem;font-weight:600;color:var(--accent)}
+.acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.act{display:inline-flex;gap:6px;align-items:center;padding:4px 12px;border:1px solid var(--line);border-radius:20px;font-size:.8rem;transition:.25s}
+.act:hover{border-color:var(--accent);color:var(--accent)}
+.act bdi{direction:ltr;unicode-bidi:isolate}
+.sub-title{margin:30px auto 14px;font-size:1.05rem;color:var(--accent)}
+
+/* ---- email form ---- */
+.mailbox{max-width:760px!important;margin-top:34px;padding:26px;border:1px solid var(--line);border-radius:18px;text-align:start;background:var(--panel)}
+.mailbox .chips-row{margin-bottom:14px}
+.mailbox .hp{position:absolute;left:-9999px;opacity:0}
+.msg{display:none;margin-top:14px;font-size:.9rem}
+[data-state=ok] .msg.ok,[data-state=err] .msg.err,[data-state=mailto] .msg.mail{display:block}
+.msg.ok{color:#1fa971}.msg.err{color:#ff6b6b}.msg.mail{color:var(--mut)}
+[data-state=sending] button[type=submit]{opacity:.6;pointer-events:none}
+.mail-line{margin-top:20px;color:var(--mut);font-size:.9rem}
+.mail-line a{color:var(--accent);font-weight:600}

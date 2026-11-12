@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClickTradE Y.I.S</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Styles: order matters (themes -> base -> parts) -->
+  <link rel="stylesheet" href="css/themes.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/services.css" />
+  <link rel="stylesheet" href="css/tools.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+  <script src="js/prefs.js"></script>
+</head>
+<body>
+
+<!-- Language switch (pure CSS): the checked radio decides which <en>/<de>/<ar> text is shown -->
+<input type="radio" name="lang" id="l-en" checked hidden>
+<input type="radio" name="lang" id="l-de" hidden>
+<input type="radio" name="lang" id="l-ar" hidden>
+
+<!-- ============ HEADER ============ -->
+<header class="hdr">
+  <div class="cnt">
+    <a href="#home" class="logo"><i class="bi bi-globe-americas"></i><span>ClickTradE <span class="red">Y.I.S</span></span></a>
+    <input type="checkbox" id="menu-toggle" hidden>
+    <label for="menu-toggle" class="burger" aria-label="Menu"><i class="bi bi-list"></i></label>
+    <nav class="nav">
+      <a href="#home"><en>Home</en><de>Start</de><ar>الرئيسية</ar></a>
+      <a href="#about"><en>About</en><de>Über uns</de><ar>من نحن</ar></a>
+      <div class="has-menu">
+        <a href="#services"><en>Services</en><de>Leistungen</de><ar>خدماتنا</ar></a>
+        <div class="mega"><a href="#svc1"><i class="bi bi-graph-up-arrow"></i><en>Business Development</en><de>Geschäftsentwicklung</de><ar>تطوير الأعمال</ar></a><a href="#svc2"><i class="bi bi-boxes"></i><en>Sourcing &amp; Procurement</en><de>Beschaffung &amp; Einkauf</de><ar>التوريد والمشتريات</ar></a><a href="#svc3"><i class="bi bi-truck"></i><en>Freight &amp; Transport</en><de>Fracht &amp; Transport</de><ar>الشحن والنقل</ar></a><a href="#svc4"><i class="bi bi-shield-check"></i><en>Customs Clearance</en><de>Zollabfertigung</de><ar>التخليص الجمركي</ar></a><a href="#svc5"><i class="bi bi-currency-bitcoin"></i><en>Payment Solutions</en><de>Zahlungslösungen</de><ar>حلول الدفع</ar></a></div>
+      </div>
+      <a href="#request"><en>Tools</en><de>Tools</de><ar>الأدوات</ar></a>
+      <a href="#process"><en>Process</en><de>Ablauf</de><ar>مراحل التنفيذ</ar></a>
+      <a href="#contact" class="btn-line"><i class="bi bi-whatsapp"></i><en>Contact</en><de>Kontakt</de><ar>تواصل معنا</ar></a>
+    </nav>
+    <div class="tools">
+      <div class="lang"><label for="l-en">EN</label><label for="l-de">DE</label><label for="l-ar">AR</label></div>
+      <details class="themes"><summary aria-label="Colours"><i class="bi bi-palette"></i></summary><div class="swatches"><button type="button" data-theme-set="crimson" style="--c:#e63946" title="crimson" aria-label="crimson"></button><button type="button" data-theme-set="ocean" style="--c:#14b8c4" title="ocean" aria-label="ocean"></button><button type="button" data-theme-set="gold" style="--c:#f2b630" title="gold" aria-label="gold"></button><button type="button" data-theme-set="emerald" style="--c:#1fc98b" title="emerald" aria-label="emerald"></button><button type="button" data-theme-set="light" style="--c:#f3f5f8" title="light" aria-label="light"></button></div></details>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO: headline + live shipment console (js/hero.js) ============ -->
+<section id="home" class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid">
+    <div class="hero-txt">
+      <span class="badge"><i class="bi bi-geo-alt-fill"></i><en>Europe ↔ Middle East</en><de>Europa ↔ Naher Osten</de><ar>أوروبا ↔ الشرق الأوسط</ar></span>
+      <h1>
+        <en>We connect<br>markets, we<br>execute trade<br><em>professionally.</em></en>
+        <de>Wir verbinden<br>Märkte und<br>führen Handel aus<br><em>professionell.</em></de>
+        <ar>نربط الأسواق<br>ننفذ التجارة<br><em>باحتراف.</em></ar>
+      </h1>
+      <p><en>We achieve the impossible with one click, delivering the best and fastest trade orders and quality on global markets.</en><de>Wir erreichen das Unmögliche mit einem Klick – für die besten und schnellsten Trade-Aufträge in höchster Qualität auf den globalen Märkten.</de><ar>نحقق المستحيل بنقرة واحدة، لنقدّم أفضل وأسرع طلبات التجارة وبأعلى جودة في الأسواق العالمية.</ar></p>
+      <div class="actions">
+        <a href="#services" class="btn"><en>Explore our services</en><de>Leistungen entdecken</de><ar>استكشف خدماتنا</ar></a>
+        <a href="#request" class="btn-line"><i class="bi bi-list-check"></i><en>Start a request</en><de>Anfrage starten</de><ar>ابدأ طلبك</ar></a>
+      </div>
+      <ul class="facts">
+        <li><b data-count="5">5</b><span><en>Core services</en><de>Kernleistungen</de><ar>خدمات أساسية</ar></span></li>
+        <li><b data-count="3">3</b><span><en>Languages</en><de>Sprachen</de><ar>لغات</ar></span></li>
+        <li><b data-count="2">2</b><span><en>WhatsApp lines</en><de>WhatsApp-Leitungen</de><ar>خطا واتساب</ar></span></li>
+      </ul>
+    </div>
+
+    <div class="console" data-console data-goods="vehicles">
+      <div class="console-top">
+        <span class="console-title"><span class="live-dot"></span><en>Shipment simulator</en><de>Sendungs-Simulator</de><ar>محاكي الشحنة</ar></span>
+        <div class="goods">
+          <button type="button" data-goods="vehicles" aria-pressed="true"><en>Vehicles</en><de>Fahrzeuge</de><ar>سيارات</ar></button>
+          <button type="button" data-goods="machinery" aria-pressed="false"><en>Machinery</en><de>Maschinen</de><ar>آلات</ar></button>
+          <button type="button" data-goods="equipment" aria-pressed="false"><en>Equipment</en><de>Anlagen</de><ar>معدات</ar></button>
+        </div>
+      </div>
+      <svg class="console-map" viewBox="0 0 800 450" aria-hidden="true">
+        <image href="img/hero1.png" width="800" height="450"/>
+        <path class="route-base" data-route d="M244 120 C320 120 350 170 382 222 S395 290 402 320 S520 390 616 363"/>
+        <path class="route-trail" data-trail d="M244 120 C320 120 350 170 382 222 S395 290 402 320 S520 390 616 363"/>
+        <g>
+          <circle class="city" cx="244" cy="120" r="5"/><text class="city-label" x="254" y="116">Berlin</text>
+          <circle class="city" cx="382" cy="222" r="5"/><text class="city-label" x="392" y="218">Istanbul</text>
+          <circle class="city" cx="402" cy="320" r="5"/><text class="city-label" x="412" y="316">Cairo</text>
+          <circle class="city" cx="616" cy="363" r="5"/><text class="city-label" x="626" y="359">Dubai</text>
+        </g>
+        <g data-marker><circle class="marker-ring" r="8"/><circle class="marker-core" r="7"/></g>
+      </svg>
+      <ol class="track"><li><i class="bi bi-chat-dots"></i><en>Request</en><de>Anfrage</de><ar>الطلب</ar></li><li><i class="bi bi-search"></i><en>Sourcing</en><de>Beschaffung</de><ar>التوريد</ar></li><li><i class="bi bi-truck"></i><en>Freight</en><de>Fracht</de><ar>الشحن</ar></li><li><i class="bi bi-shield-check"></i><en>Customs</en><de>Zoll</de><ar>الجمارك</ar></li><li><i class="bi bi-currency-exchange"></i><en>Payment</en><de>Zahlung</de><ar>الدفع</ar></li><li><i class="bi bi-house-check"></i><en>Delivery</en><de>Lieferung</de><ar>التسليم</ar></li></ol>
+      <p class="goods-info vehicles"><en>Vehicles from trusted European partners, shipped by Ro-Ro or container.</en><de>Fahrzeuge von vertrauenswürdigen europäischen Partnern, per RoRo oder Container.</de><ar>سيارات من شركاء أوروبيين موثوقين، تُشحن بالرورو أو بالحاويات.</ar></p>
+      <p class="goods-info machinery"><en>Machinery sourced, loaded and secured for sea or road freight.</en><de>Maschinen beschafft, verladen und für See- oder Straßenfracht gesichert.</de><ar>آلات يتم توريدها وتحميلها وتأمينها للشحن البحري أو البري.</ar></p>
+      <p class="goods-info equipment"><en>Factory equipment sourced, packed and delivered as requested.</en><de>Fabrikanlagen beschafft, verpackt und wie gewünscht geliefert.</de><ar>معدات مصانع يتم توريدها وتغليفها وتسليمها كما طُلب.</ar></p>
+      <p class="demo-note"><en>Illustrative demo – click a step or a goods type.</en><de>Illustrative Demo – Schritt oder Warenart anklicken.</de><ar>عرض توضيحي – اضغط على خطوة أو نوع بضاعة.</ar></p>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="sec">
+  <p class="eyebrow"><en>About us</en><de>Über uns</de><ar>من نحن</ar></p>
+  <h2><en>One platform connecting industries worldwide</en><de>Eine Plattform, die Industrien weltweit verbindet</de><ar>منصة واحدة تربط الصناعات حول العالم</ar></h2>
+  <p class="lead"><en>ClickTrade YIS is a global platform for trade, freight and logistics. We simplify supply chains with trust and transparency.</en><de>ClickTrade YIS ist eine globale Plattform für Handel, Fracht und Logistik – mit Vertrauen und Transparenz.</de><ar>منصة عالمية للتجارة والشحن والخدمات اللوجستية. نبسّط سلاسل الإمداد بثقة وشفافية.</ar></p>
+  <div class="boxes">
+    <div class="box"><i class="bi bi-people-fill"></i><h3><en>Our mission</en><de>Unsere Mission</de><ar>رسالتنا</ar></h3><p><en>Make international trade easier and faster for every business.</en><de>Internationalen Handel für jedes Unternehmen einfacher und schneller machen.</de><ar>جعل التجارة الدولية أسهل وأسرع لكل الشركات.</ar></p></div>
+    <div class="box"><i class="bi bi-heart-fill"></i><h3><en>Our values</en><de>Unsere Werte</de><ar>قيمنا</ar></h3><p><en>Integrity, transparency and customer satisfaction.</en><de>Integrität, Transparenz und Kundenzufriedenheit.</de><ar>النزاهة والشفافية ورضا العميل.</ar></p></div>
+    <div class="box"><i class="bi bi-eye-fill"></i><h3><en>Our vision</en><de>Unsere Vision</de><ar>رؤيتنا</ar></h3><p><en>Connecting global industries on one platform.</en><de>Globale Industrien auf einer Plattform verbinden.</de><ar>ربط الصناعات العالمية عبر منصة واحدة.</ar></p></div>
+    <div class="box"><i class="bi bi-check-circle-fill"></i><h3><en>Why us</en><de>Warum wir</de><ar>لماذا نحن</ar></h3><p><en>Tailored solutions and reliable support.</en><de>Maßgeschneiderte Lösungen und verlässlicher Support.</de><ar>حلول مخصصة ودعم موثوق.</ar></p></div>
+  </div>
+</section>
+
+<!-- Services: hover = photos fan out, click = cinematic detail view -->
+<section id="services" class="sec alt">
+  <p class="eyebrow"><en>Our services</en><de>Unsere Leistungen</de><ar>خدماتنا</ar></p>
+  <h2><en>Complete solutions for successful global trade</en><de>Komplette Lösungen für erfolgreichen Welthandel</de><ar>حلول متكاملة لتجارة عالمية ناجحة</ar></h2>
+  <p class="lead"><en>Hover a card for a preview, click it for details.</en><de>Karte berühren für Vorschau, anklicken für Details.</de><ar>مرّر على البطاقة للمعاينة واضغط للتفاصيل.</ar></p>
+  <div class="cards">
+    <article class="card">
+      <div class="thumb"><i class="bi bi-graph-up-arrow"></i><span class="ph" style="--img:url(img/s/1-1.jpg)"></span><span class="ph" style="--img:url(img/s/1-2.jpg)"></span><span class="ph" style="--img:url(img/s/1-3.jpg)"></span></div>
+      <h3><en>Business Development &amp; Trade Support</en><de>Geschäftsentwicklung &amp; Handelsunterstützung</de><ar>تطوير الأعمال ودعم التجارة</ar></h3>
+      <p><en>Connecting businesses with reliable suppliers and smooth commercial agreements.</en><de>Wir verbinden Unternehmen mit zuverlässigen Lieferanten und sorgen für reibungslose Handelsabschlüsse.</de><ar>نربط الشركات بموردين موثوقين ونيسّر اتفاقيات تجارية سلسة.</ar></p>
+      <a href="#svc1"><en>View details</en><de>Details ansehen</de><ar>عرض التفاصيل</ar></a>
+    </article>
+    <article class="card">
+      <div class="thumb"><i class="bi bi-boxes"></i><span class="ph" style="--img:url(img/s/2-1.jpg)"></span><span class="ph" style="--img:url(img/s/2-2.jpg)"></span><span class="ph" style="--img:url(img/s/2-3.jpg)"></span></div>
+      <h3><en>End-to-End Sourcing &amp; Procurement</en><de>Beschaffung &amp; Einkauf aus einer Hand</de><ar>التوريد والمشتريات المتكاملة</ar></h3>
+      <p><en>Vehicles, machinery and factory equipment from trusted European partners.</en><de>Fahrzeuge, Maschinen und Fabrikausrüstung von vertrauenswürdigen europäischen Partnern.</de><ar>سيارات وآلات ومعدات مصانع من شركاء أوروبيين موثوقين.</ar></p>
+      <a href="#svc2"><en>View details</en><de>Details ansehen</de><ar>عرض التفاصيل</ar></a>
+    </article>
+    <article class="card">
+      <div class="thumb"><i class="bi bi-truck"></i><span class="ph" style="--img:url(img/s/3-1.jpg)"></span><span class="ph" style="--img:url(img/s/3-2.jpg)"></span><span class="ph" style="--img:url(img/s/3-3.jpg)"></span></div>
+      <h3><en>Freight &amp; Transport Solutions</en><de>Fracht- &amp; Transportlösungen</de><ar>حلول الشحن والنقل</ar></h3>
+      <p><en>Fast, reliable and cost-effective freight from all over Europe.</en><de>Schnelle, zuverlässige und kostengünstige Fracht aus ganz Europa.</de><ar>شحن ونقل سريع وموثوق واقتصادي من كل أنحاء أوروبا.</ar></p>
+      <a href="#svc3"><en>View details</en><de>Details ansehen</de><ar>عرض التفاصيل</ar></a>
+    </article>
+    <article class="card">
+      <div class="thumb"><i class="bi bi-shield-check"></i><span class="ph" style="--img:url(img/s/4-1.jpg)"></span><span class="ph" style="--img:url(img/s/4-2.jpg)"></span><span class="ph" style="--img:url(img/s/4-3.jpg)"></span></div>
+      <h3><en>Customs Clearance Support</en><de>Zollabfertigung</de><ar>دعم التخليص الجمركي</ar></h3>
+      <p><en>On request: all paperwork and legal steps at the port.</en><de>Auf Anfrage: alle Formalitäten und rechtlichen Schritte am Hafen.</de><ar>عند الطلب: كل الأوراق والخطوات القانونية في الميناء.</ar></p>
+      <a href="#svc4"><en>View details</en><de>Details ansehen</de><ar>عرض التفاصيل</ar></a>
+    </article>
+    <article class="card">
+      <div class="thumb"><i class="bi bi-currency-bitcoin"></i><span class="ph" style="--img:url(img/s/5-1.jpg)"></span><span class="ph" style="--img:url(img/s/5-2.jpg)"></span><span class="ph" style="--img:url(img/s/5-3.jpg)"></span></div>
+      <h3><en>Cutting-Edge Payment Solutions</en><de>Moderne Zahlungslösungen</de><ar>حلول دفع متطورة</ar></h3>
+      <p><en>Secure, fast, low-cost cross-border payments, including crypto.</en><de>Sichere, schnelle und günstige Zahlungen – auch mit Kryptowährungen.</de><ar>مدفوعات آمنة وسريعة واقتصادية عبر الحدود، بما فيها العملات الرقمية.</ar></p>
+      <a href="#svc5"><en>View details</en><de>Details ansehen</de><ar>عرض التفاصيل</ar></a>
+    </article>
+  </div>
+</section>
+
+<!-- ============ SERVICES IN DETAIL ============ -->
+<div id="solutions">
+<nav class="svc-nav" aria-label="Services"><a href="#svc1"><i class="bi bi-graph-up-arrow"></i><en>Business</en><de>Business</de><ar>الأعمال</ar></a><a href="#svc2"><i class="bi bi-boxes"></i><en>Sourcing</en><de>Beschaffung</de><ar>التوريد</ar></a><a href="#svc3"><i class="bi bi-truck"></i><en>Freight</en><de>Fracht</de><ar>الشحن</ar></a><a href="#svc4"><i class="bi bi-shield-check"></i><en>Customs</en><de>Zoll</de><ar>الجمارك</ar></a><a href="#svc5"><i class="bi bi-currency-bitcoin"></i><en>Payments</en><de>Zahlung</de><ar>الدفع</ar></a></nav>
+<section id="svc1" class="svc">
+  <div class="svc-in">
+    <div class="svc-head reveal"><span class="svc-num">01</span><h2><en>Business Development &amp; Trade Support</en><de>Geschäftsentwicklung &amp; Handelsunterstützung</de><ar>تطوير الأعمال ودعم التجارة</ar></h2><p><en>Connecting businesses with reliable suppliers and smooth commercial agreements – supporting growth into new markets.</en><de>Wir verbinden Unternehmen mit zuverlässigen Lieferanten und reibungslosen Handelsabschlüssen – für Wachstum in neue Märkte.</de><ar>نربط الشركات بموردين موثوقين واتفاقيات تجارية سلسة – لدعم النمو والتوسع في أسواق جديدة.</ar></p></div>
+    <div class="svc-grid reveal">
+      <div class="svc-visual"><div class="v-net"><svg viewBox="0 0 400 280" aria-hidden="true"><line class="net-line" style="--i:0" x1="200" y1="140" x2="60" y2="50"/><line class="net-line" style="--i:1" x1="200" y1="140" x2="60" y2="140"/><line class="net-line" style="--i:2" x1="200" y1="140" x2="60" y2="230"/><line class="net-line" style="--i:3" x1="200" y1="140" x2="340" y2="70"/><line class="net-line" style="--i:4" x1="200" y1="140" x2="340" y2="210"/><g class="net-nodes"><g style="--i:0"><circle class="net-node" cx="60" cy="50" r="26"/><text class="net-emoji" x="60" y="50">🏭</text></g><g style="--i:1"><circle class="net-node" cx="60" cy="140" r="26"/><text class="net-emoji" x="60" y="140">🏭</text></g><g style="--i:2"><circle class="net-node" cx="60" cy="230" r="26"/><text class="net-emoji" x="60" y="230">🏭</text></g><g style="--i:3"><circle class="net-node" cx="340" cy="70" r="26"/><text class="net-emoji" x="340" y="70">🏢</text></g><g style="--i:4"><circle class="net-node" cx="340" cy="210" r="26"/><text class="net-emoji" x="340" y="210">🏬</text></g></g><circle class="net-pulse" cx="200" cy="140" r="34"/><circle class="net-core" cx="200" cy="140" r="34"/><text class="net-emoji" x="200" y="140" style="font-size:30px">🤝</text></svg><span class="deal-badge">✓ <en>Agreement secured</en><de>Vertrag gesichert</de><ar>تم الاتفاق</ar></span></div><div class="float-photos" aria-hidden="true"><span class="ph fp1" style="--img:url(img/s/1-1.jpg)"></span><span class="ph fp2" style="--img:url(img/s/1-2.jpg)"></span><span class="ph fp3" style="--img:url(img/s/1-3.jpg)"></span></div></div>
+      <div class="svc-body">
+        <ol class="tl"><li style="--i:0"><b><en>Understand your goal</en><de>Ziel verstehen</de><ar>فهم هدفك</ar></b><span><en>We learn what you want to buy or sell.</en><de>Wir klären, was Sie ein- oder verkaufen möchten.</de><ar>نفهم ما تريد شراءه أو بيعه.</ar></span></li><li style="--i:1"><b><en>Match suppliers</en><de>Lieferanten zuordnen</de><ar>اختيار الموردين</ar></b><span><en>We connect you with reliable suppliers.</en><de>Wir bringen Sie mit zuverlässigen Lieferanten zusammen.</de><ar>نربطك بموردين موثوقين.</ar></span></li><li style="--i:2"><b><en>Agree the deal</en><de>Deal vereinbaren</de><ar>الاتفاق على الصفقة</ar></b><span><en>We help shape smooth commercial agreements.</en><de>Wir unterstützen bei reibungslosen Handelsvereinbarungen.</de><ar>نساعد في صياغة اتفاقيات تجارية سلسة.</ar></span></li><li style="--i:3"><b><en>Execute &amp; grow</en><de>Umsetzen &amp; wachsen</de><ar>التنفيذ والنمو</ar></b><span><en>End-to-end execution that supports expansion into new markets.</en><de>Komplette Abwicklung, die die Expansion in neue Märkte unterstützt.</de><ar>تنفيذ متكامل يدعم التوسع في أسواق جديدة.</ar></span></li></ol>
+        <div class="example"><small><en>Example scenario</en><de>Beispielszenario</de><ar>سيناريو توضيحي</ar></small><en>A company wants to enter a new market and needs trustworthy suppliers. We find them, support the agreement and follow the deal through to delivery.</en><de>Ein Unternehmen möchte einen neuen Markt erschließen und braucht vertrauenswürdige Lieferanten. Wir finden sie, begleiten den Vertrag und führen den Deal bis zur Lieferung.</de><ar>شركة تريد دخول سوق جديد وتحتاج موردين موثوقين. نجدهم، وندعم الاتفاق، ونتابع الصفقة حتى التسليم.</ar></div>
+        <div class="faq"><details><summary><en>Who is this for?</en><de>Für wen ist das?</de><ar>لمن هذه الخدمة؟</ar></summary><p><en>Businesses that want reliable suppliers or want to expand into new markets.</en><de>Unternehmen, die zuverlässige Lieferanten suchen oder in neue Märkte expandieren wollen.</de><ar>للشركات التي تبحث عن موردين موثوقين أو تريد التوسع في أسواق جديدة.</ar></p></details><details><summary><en>Do you handle the whole deal?</en><de>Begleiten Sie den ganzen Deal?</de><ar>هل تتولون الصفقة كاملة؟</ar></summary><p><en>Yes – our end-to-end solutions cover every step of execution.</en><de>Ja – unsere Komplettlösungen decken jeden Schritt der Umsetzung ab.</de><ar>نعم، حلولنا المتكاملة تغطي كل خطوات التنفيذ.</ar></p></details></div>
+        <a href="#request" class="btn" data-service="1"><i class="bi bi-whatsapp"></i><en>Request this service</en><de>Leistung anfragen</de><ar>اطلب هذه الخدمة</ar></a>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="svc2" class="svc flip">
+  <div class="svc-in">
+    <div class="svc-head reveal"><span class="svc-num">02</span><h2><en>End-to-End Sourcing &amp; Procurement</en><de>Beschaffung &amp; Einkauf aus einer Hand</de><ar>التوريد والمشتريات المتكاملة</ar></h2><p><en>Vehicles, machinery and factory equipment from established, trusted European partners – delivered in excellent condition, exactly as requested.</en><de>Fahrzeuge, Maschinen und Fabrikausrüstung von etablierten, vertrauenswürdigen europäischen Partnern – in einwandfreiem Zustand, genau wie bestellt.</de><ar>سيارات وآلات ومعدات مصانع من شركاء أوروبيين راسخين وموثوقين – تصل بحالة ممتازة تمامًا كما طُلبت.</ar></p></div>
+    <div class="svc-grid reveal">
+      <div class="svc-visual"><div class="v-src"><div class="deck"><div class="gcard">🚗<b><en>Vehicles</en><de>Fahrzeuge</de><ar>سيارات</ar></b></div><div class="gcard">🏗️<b><en>Machinery</en><de>Maschinen</de><ar>آلات</ar></b></div><div class="gcard">🏭<b><en>Factory equipment</en><de>Fabrikausrüstung</de><ar>معدات مصانع</ar></b></div></div><ul class="check"><li style="--i:0"><en>Matched to your request</en><de>Auf Ihre Anfrage abgestimmt</de><ar>مطابق لطلبك</ar></li><li style="--i:1"><en>Offer from a trusted partner</en><de>Angebot eines vertrauenswürdigen Partners</de><ar>عرض من شريك موثوق</ar></li><li style="--i:2"><en>Quality confirmed</en><de>Qualität bestätigt</de><ar>تأكيد الجودة</ar></li><li style="--i:3"><en>Ready for shipping</en><de>Versandbereit</de><ar>جاهز للشحن</ar></li></ul></div><div class="float-photos" aria-hidden="true"><span class="ph fp1" style="--img:url(img/s/2-1.jpg)"></span><span class="ph fp2" style="--img:url(img/s/2-2.jpg)"></span><span class="ph fp3" style="--img:url(img/s/2-3.jpg)"></span></div></div>
+      <div class="svc-body">
+        <ol class="tl"><li style="--i:0"><b><en>Your request</en><de>Ihre Anfrage</de><ar>طلبك</ar></b><span><en>Tell us the item, specifications and quantity.</en><de>Nennen Sie Artikel, Spezifikationen und Menge.</de><ar>أخبرنا بالصنف والمواصفات والكمية.</ar></span></li><li style="--i:1"><b><en>Partner search</en><de>Partnersuche</de><ar>البحث عن الشريك</ar></b><span><en>We source from our trusted European partners.</en><de>Wir beschaffen bei unseren vertrauenswürdigen europäischen Partnern.</de><ar>نورّد من شركائنا الأوروبيين الموثوقين.</ar></span></li><li style="--i:2"><b><en>Match &amp; confirm</en><de>Abgleich &amp; Bestätigung</de><ar>المطابقة والتأكيد</ar></b><span><en>The offer is matched to exactly what you asked for.</en><de>Das Angebot wird genau auf Ihre Anfrage abgestimmt.</de><ar>يُطابق العرض ما طلبته تمامًا.</ar></span></li><li style="--i:3"><b><en>Delivery</en><de>Lieferung</de><ar>التسليم</ar></b><span><en>The item arrives in excellent condition.</en><de>Der Artikel kommt in einwandfreiem Zustand an.</de><ar>يصل الصنف بحالة ممتازة.</ar></span></li></ol>
+        <div class="example"><small><en>Example scenario</en><de>Beispielszenario</de><ar>سيناريو توضيحي</ar></small><en>You need a piece of machinery for a factory project. You send the specifications, we source it from a partner and organise the delivery.</en><de>Sie brauchen eine Maschine für ein Fabrikprojekt. Sie senden die Spezifikationen, wir beschaffen sie bei einem Partner und organisieren die Lieferung.</de><ar>تحتاج آلة لمشروع مصنع. ترسل المواصفات، ونورّدها من أحد شركائنا وننظم التسليم.</ar></div>
+        <div class="faq"><details><summary><en>What can you source?</en><de>Was können Sie beschaffen?</de><ar>ماذا يمكنكم توريده؟</ar></summary><p><en>A wide range of goods, including vehicles, machinery and factory equipment.</en><de>Eine breite Palette an Waren, darunter Fahrzeuge, Maschinen und Fabrikausrüstung.</de><ar>مجموعة واسعة من السلع، منها السيارات والآلات ومعدات المصانع.</ar></p></details><details><summary><en>Can you source something else?</en><de>Auch etwas anderes?</de><ar>هل يمكنكم توريد أصناف أخرى؟</ar></summary><p><en>Ask us – we cover a wide range of goods beyond these examples.</en><de>Fragen Sie uns – wir decken eine breite Palette über diese Beispiele hinaus ab.</de><ar>اسألنا – نغطي مجموعة واسعة من السلع تتجاوز هذه الأمثلة.</ar></p></details></div>
+        <a href="#request" class="btn" data-service="2"><i class="bi bi-whatsapp"></i><en>Request this service</en><de>Leistung anfragen</de><ar>اطلب هذه الخدمة</ar></a>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="svc3" class="svc">
+  <div class="svc-in">
+    <div class="svc-head reveal"><span class="svc-num">03</span><h2><en>Freight &amp; Transport Solutions</en><de>Fracht- &amp; Transportlösungen</de><ar>حلول الشحن والنقل</ar></h2><p><en>Fast, reliable and cost-effective transport and freight from all over Europe – from a single item to full container loads.</en><de>Schneller, zuverlässiger und kostengünstiger Transport und Fracht aus ganz Europa – vom Einzelstück bis zur vollen Containerladung.</de><ar>نقل وشحن سريع وموثوق واقتصادي من كل أنحاء أوروبا – من قطعة واحدة إلى حمولات حاويات كاملة.</ar></p></div>
+    <div class="svc-grid reveal">
+      <div class="svc-visual"><div class="v-frt"><div class="lane"><b><en>Single item</en><de>Einzelstück</de><ar>قطعة واحدة</ar></b><div class="lane-track"><span class="mover m1">🚚</span></div><div class="bars"><span><en>Speed</en><de>Tempo</de><ar>السرعة</ar></span><i style="--w:85%"></i><span><en>Cost</en><de>Kosten</de><ar>التكلفة</ar></span><i style="--w:60%"></i></div></div><div class="lane"><b><en>Full container</en><de>Voller Container</de><ar>حاوية كاملة</ar></b><div class="lane-track"><span class="mover m2">🚢</span></div><div class="bars"><span><en>Speed</en><de>Tempo</de><ar>السرعة</ar></span><i style="--w:55%"></i><span><en>Cost</en><de>Kosten</de><ar>التكلفة</ar></span><i style="--w:35%"></i></div></div><small><en>Illustrative comparison – we find the best option for you.</en><de>Illustrativer Vergleich – wir finden die beste Option für Sie.</de><ar>مقارنة توضيحية – نجد لك أفضل خيار.</ar></small></div><div class="float-photos" aria-hidden="true"><span class="ph fp1" style="--img:url(img/s/3-1.jpg)"></span><span class="ph fp2" style="--img:url(img/s/3-2.jpg)"></span><span class="ph fp3" style="--img:url(img/s/3-3.jpg)"></span></div></div>
+      <div class="svc-body">
+        <ol class="tl"><li style="--i:0"><b><en>Tell us the load</en><de>Ladung nennen</de><ar>حدّد الشحنة</ar></b><span><en>A single item or a full container, and where it goes.</en><de>Einzelstück oder Container und das Ziel.</de><ar>قطعة واحدة أو حاوية كاملة، ووجهتها.</ar></span></li><li style="--i:1"><b><en>Compare options</en><de>Optionen vergleichen</de><ar>قارن الخيارات</ar></b><span><en>We find the best delivery options for you.</en><de>Wir finden die besten Liefermöglichkeiten für Sie.</de><ar>نجد لك أفضل خيارات التوصيل.</ar></span></li><li style="--i:2"><b><en>Book &amp; move</en><de>Buchen &amp; verschicken</de><ar>الحجز والنقل</ar></b><span><en>Your goods are organised and moved from Europe.</en><de>Ihre Ware wird organisiert und aus Europa transportiert.</de><ar>ننظم بضائعك وننقلها من أوروبا.</ar></span></li><li style="--i:3"><b><en>Arrival</en><de>Ankunft</de><ar>الوصول</ar></b><span><en>The goods reach their destination.</en><de>Die Ware erreicht ihr Ziel.</de><ar>تصل البضائع إلى وجهتها.</ar></span></li></ol>
+        <div class="example"><small><en>Example scenario</en><de>Beispielszenario</de><ar>سيناريو توضيحي</ar></small><en>A buyer needs one machine from Germany and, later, a full container of parts from Italy. We compare the delivery options for each shipment.</en><de>Ein Käufer braucht eine Maschine aus Deutschland und später einen vollen Container mit Teilen aus Italien. Wir vergleichen die Liefermöglichkeiten für jede Sendung.</de><ar>مشترٍ يحتاج آلة واحدة من ألمانيا، وبعدها حاوية كاملة من القطع من إيطاليا. نقارن خيارات التوصيل لكل شحنة.</ar></div>
+        <div class="faq"><details><summary><en>Single item or container?</en><de>Einzelstück oder Container?</de><ar>قطعة أم حاوية؟</ar></summary><p><en>Both – from one item up to full container loads.</en><de>Beides – vom Einzelstück bis zur vollen Containerladung.</de><ar>كلاهما – من قطعة واحدة حتى حمولة حاوية كاملة.</ar></p></details><details><summary><en>How do you choose the route?</en><de>Wie wählen Sie die Route?</de><ar>كيف تختارون المسار؟</ar></summary><p><en>We compare the available delivery options and recommend the best fit for speed and cost.</en><de>Wir vergleichen die verfügbaren Lieferoptionen und empfehlen die beste für Tempo und Kosten.</de><ar>نقارن خيارات التوصيل المتاحة ونوصي بالأنسب من حيث السرعة والتكلفة.</ar></p></details></div>
+        <a href="#request" class="btn" data-service="3"><i class="bi bi-whatsapp"></i><en>Request this service</en><de>Leistung anfragen</de><ar>اطلب هذه الخدمة</ar></a>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="svc4" class="svc flip">
+  <div class="svc-in">
+    <div class="svc-head reveal"><span class="svc-num">04</span><h2><en>Customs Clearance Support</en><de>Zollabfertigung</de><ar>دعم التخليص الجمركي</ar></h2><p><en>Available upon request: we handle the paperwork and legal steps at the port for a hassle-free entry of your goods.</en><de>Auf Anfrage: Wir erledigen Formalitäten und rechtliche Schritte am Hafen für eine problemlose Einfuhr Ihrer Waren.</de><ar>متاح عند الطلب: نتولى الأوراق والخطوات القانونية في الميناء لضمان دخول بضائعك دون متاعب.</ar></p></div>
+    <div class="svc-grid reveal">
+      <div class="svc-visual"><div class="v-cus"><div class="paper p1"><i></i><i></i><i></i></div><div class="paper p2"><i></i><i></i><i></i></div><div class="paper p3"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="stamp"><en>CLEARED</en><de>ABGEFERTIGT</de><ar>تم التخليص</ar></div></div><div class="float-photos" aria-hidden="true"><span class="ph fp1" style="--img:url(img/s/4-1.jpg)"></span><span class="ph fp2" style="--img:url(img/s/4-2.jpg)"></span><span class="ph fp3" style="--img:url(img/s/4-3.jpg)"></span></div></div>
+      <div class="svc-body">
+        <ol class="tl"><li style="--i:0"><b><en>Request support</en><de>Hilfe anfragen</de><ar>اطلب الدعم</ar></b><span><en>Tell us you want customs help for your shipment.</en><de>Sagen Sie uns, dass Sie Zollhilfe benötigen.</de><ar>أخبرنا أنك تريد دعمًا جمركيًا لشحنتك.</ar></span></li><li style="--i:1"><b><en>Documents</en><de>Dokumente</de><ar>المستندات</ar></b><span><en>We prepare and check the required paperwork.</en><de>Wir bereiten die nötigen Unterlagen vor und prüfen sie.</de><ar>نجهز المستندات المطلوبة ونراجعها.</ar></span></li><li style="--i:2"><b><en>Legal steps</en><de>Rechtliche Schritte</de><ar>الخطوات القانونية</ar></b><span><en>We take care of the legal steps at the port.</en><de>Wir erledigen die rechtlichen Schritte am Hafen.</de><ar>نتولى الخطوات القانونية في الميناء.</ar></span></li><li style="--i:3"><b><en>Cleared</en><de>Abgefertigt</de><ar>تم التخليص</ar></b><span><en>Your goods enter without the hassle.</en><de>Ihre Ware wird ohne Aufwand eingeführt.</de><ar>تدخل بضائعك دون متاعب.</ar></span></li></ol>
+        <div class="example"><small><en>Example scenario</en><de>Beispielszenario</de><ar>سيناريو توضيحي</ar></small><en>Your shipment reaches the port and you would rather not deal with the forms yourself. You request customs support and we take care of the process.</en><de>Ihre Sendung erreicht den Hafen und Sie möchten sich nicht selbst um die Formulare kümmern. Sie fordern Zollhilfe an und wir übernehmen den Ablauf.</de><ar>تصل شحنتك إلى الميناء وتفضل ألا تتعامل مع الأوراق بنفسك. تطلب الدعم الجمركي ونتولى نحن الإجراءات.</ar></div>
+        <div class="faq"><details><summary><en>Is it included automatically?</en><de>Ist es automatisch enthalten?</de><ar>هل هي مشمولة تلقائيًا؟</ar></summary><p><en>No – it is available upon request, so you add it only when you need it.</en><de>Nein – nur auf Anfrage, Sie buchen es nur, wenn Sie es brauchen.</de><ar>لا – هي متاحة عند الطلب، فتضيفها فقط عند الحاجة.</ar></p></details><details><summary><en>Where do you help?</en><de>Wo helfen Sie?</de><ar>أين تساعدون؟</ar></summary><p><en>At the port, with the paperwork and legal steps for entry.</en><de>Am Hafen, bei Formalitäten und rechtlichen Schritten der Einfuhr.</de><ar>في الميناء، في الأوراق والخطوات القانونية للدخول.</ar></p></details></div>
+        <a href="#request" class="btn" data-service="4"><i class="bi bi-whatsapp"></i><en>Request this service</en><de>Leistung anfragen</de><ar>اطلب هذه الخدمة</ar></a>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="svc5" class="svc">
+  <div class="svc-in">
+    <div class="svc-head reveal"><span class="svc-num">05</span><h2><en>Cutting-Edge Payment Solutions</en><de>Moderne Zahlungslösungen</de><ar>حلول دفع متطورة</ar></h2><p><en>Advanced payment solutions, including cryptocurrency options – secure, fast and cost-effective ways to complete transactions across borders.</en><de>Fortschrittliche Zahlungslösungen, auch mit Kryptowährungen – sicher, schnell und kostengünstig für grenzüberschreitende Transaktionen.</de><ar>حلول دفع متقدمة، بما فيها خيارات العملات الرقمية – طرق آمنة وسريعة واقتصادية لإتمام المعاملات عبر الحدود.</ar></p></div>
+    <div class="svc-grid reveal">
+      <div class="svc-visual"><div class="v-pay"><div class="pnode">💶<small><en>Traditional</en><de>Klassisch</de><ar>تقليدي</ar></small></div><div class="pipe"><span></span><span></span><span></span></div><div class="pnode">🔒<small><en>Secure</en><de>Sicher</de><ar>آمن</ar></small></div><div class="pipe"><span></span><span></span><span></span></div><div class="pnode">₿<small><en>Crypto</en><de>Krypto</de><ar>رقمي</ar></small></div><div class="settled">✓ <en>Settled</en><de>Abgeschlossen</de><ar>اكتملت</ar></div></div><div class="float-photos" aria-hidden="true"><span class="ph fp1" style="--img:url(img/s/5-1.jpg)"></span><span class="ph fp2" style="--img:url(img/s/5-2.jpg)"></span><span class="ph fp3" style="--img:url(img/s/5-3.jpg)"></span></div></div>
+      <div class="svc-body">
+        <ol class="tl"><li style="--i:0"><b><en>Choose a method</en><de>Methode wählen</de><ar>اختر الطريقة</ar></b><span><en>Pick the option that fits your deal, including crypto.</en><de>Wählen Sie die passende Option, auch Krypto.</de><ar>اختر الخيار المناسب لصفقتك، بما فيه العملات الرقمية.</ar></span></li><li style="--i:1"><b><en>Secure the payment</en><de>Zahlung absichern</de><ar>تأمين الدفع</ar></b><span><en>Transactions are completed in a secure way.</en><de>Transaktionen werden sicher abgewickelt.</de><ar>تُتمّ المعاملات بطريقة آمنة.</ar></span></li><li style="--i:2"><b><en>Transfer across borders</en><de>Grenzüberschreitend senden</de><ar>التحويل عبر الحدود</ar></b><span><en>Fast and cost-effective transfers between countries.</en><de>Schnelle und kostengünstige Überweisungen zwischen Ländern.</de><ar>تحويلات سريعة واقتصادية بين الدول.</ar></span></li><li style="--i:3"><b><en>Settled</en><de>Abgeschlossen</de><ar>اكتملت</ar></b><span><en>The transaction is complete.</en><de>Die Transaktion ist abgeschlossen.</de><ar>اكتملت المعاملة.</ar></span></li></ol>
+        <div class="example"><small><en>Example scenario</en><de>Beispielszenario</de><ar>سيناريو توضيحي</ar></small><en>A buyer and a supplier in different countries want a smooth payment. They choose a payment option, including crypto, and complete the deal.</en><de>Ein Käufer und ein Lieferant in verschiedenen Ländern möchten eine reibungslose Zahlung. Sie wählen eine Zahlungsoption, auch Krypto, und schließen den Deal ab.</de><ar>مشترٍ ومورّد في بلدين مختلفين يريدان دفعًا سلسًا. يختاران خيار دفع، بما فيه العملات الرقمية، ويتمّان الصفقة.</ar></div>
+        <div class="faq"><details><summary><en>Can I pay with cryptocurrency?</en><de>Kann ich mit Kryptowährung zahlen?</de><ar>هل يمكنني الدفع بالعملات الرقمية؟</ar></summary><p><en>Yes – cryptocurrency options are part of our payment solutions.</en><de>Ja – Kryptowährungs-Optionen gehören zu unseren Zahlungslösungen.</de><ar>نعم، خيارات العملات الرقمية جزء من حلول الدفع لدينا.</ar></p></details><details><summary><en>Why use these solutions?</en><de>Warum diese Lösungen?</de><ar>لماذا هذه الحلول؟</ar></summary><p><en>They aim to be secure, fast and cost-effective for payments across borders.</en><de>Sie sind sicher, schnell und kostengünstig für Zahlungen über Grenzen hinweg gedacht.</de><ar>تهدف لأن تكون آمنة وسريعة واقتصادية للمدفوعات عبر الحدود.</ar></p></details></div>
+        <a href="#request" class="btn" data-service="5"><i class="bi bi-whatsapp"></i><en>Request this service</en><de>Leistung anfragen</de><ar>اطلب هذه الخدمة</ar></a>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ============ REQUEST WIZARD (js/wizard.js) ============ -->
+<section id="request" class="sec alt">
+  <p class="eyebrow"><en>Start a request</en><de>Anfrage starten</de><ar>ابدأ طلبك</ar></p>
+  <h2><en>Tell us what you need</en><de>Sagen Sie uns, was Sie brauchen</de><ar>أخبرنا بما تحتاجه</ar></h2>
+  <p class="lead"><en>Four quick steps – we turn your answers into a ready message for WhatsApp or email.</en><de>Vier kurze Schritte – wir machen daraus eine fertige Nachricht für WhatsApp oder E-Mail.</de><ar>أربع خطوات سريعة – نحوّل إجاباتك إلى رسالة جاهزة لواتساب أو البريد الإلكتروني.</ar></p>
+  <form class="wiz" data-wizard novalidate>
+    <ol class="wiz-steps">
+      <li><en>Service</en><de>Leistung</de><ar>الخدمة</ar></li><li><en>Details</en><de>Details</de><ar>التفاصيل</ar></li><li><en>You</en><de>Sie</de><ar>بياناتك</ar></li><li><en>Send</en><de>Senden</de><ar>إرسال</ar></li>
+    </ol>
+    <div class="wiz-pane active"><h3><en>Which service do you need?</en><de>Welche Leistung benötigen Sie?</de><ar>ما الخدمة التي تحتاجها؟</ar></h3><div class="opts"><label class="opt"><input type="radio" name="service" value="1" data-en="Business Development" data-de="Geschäftsentwicklung" data-ar="تطوير الأعمال"><i class="bi bi-graph-up-arrow"></i><span><en>Business Development</en><de>Geschäftsentwicklung</de><ar>تطوير الأعمال</ar></span></label><label class="opt"><input type="radio" name="service" value="2" data-en="Sourcing & Procurement" data-de="Beschaffung & Einkauf" data-ar="التوريد والمشتريات"><i class="bi bi-boxes"></i><span><en>Sourcing &amp; Procurement</en><de>Beschaffung &amp; Einkauf</de><ar>التوريد والمشتريات</ar></span></label><label class="opt"><input type="radio" name="service" value="3" data-en="Freight & Transport" data-de="Fracht & Transport" data-ar="الشحن والنقل"><i class="bi bi-truck"></i><span><en>Freight &amp; Transport</en><de>Fracht &amp; Transport</de><ar>الشحن والنقل</ar></span></label><label class="opt"><input type="radio" name="service" value="4" data-en="Customs Clearance" data-de="Zollabfertigung" data-ar="التخليص الجمركي"><i class="bi bi-shield-check"></i><span><en>Customs Clearance</en><de>Zollabfertigung</de><ar>التخليص الجمركي</ar></span></label><label class="opt"><input type="radio" name="service" value="5" data-en="Payment Solutions" data-de="Zahlungslösungen" data-ar="حلول الدفع"><i class="bi bi-currency-bitcoin"></i><span><en>Payment Solutions</en><de>Zahlungslösungen</de><ar>حلول الدفع</ar></span></label><label class="opt"><input type="radio" name="service" value="0" data-en="Not sure yet" data-de="Noch unsicher" data-ar="لست متأكدًا بعد"><i class="bi bi-question-circle"></i><span><en>Not sure yet</en><de>Noch unsicher</de><ar>لست متأكدًا بعد</ar></span></label></div></div>
+    <div class="wiz-pane"><h3><en>What are you looking for?</en><de>Wonach suchen Sie?</de><ar>ما الذي تبحث عنه؟</ar></h3>
+      <label class="fld"><span><en>What do you need? (goods, quantity, specifications)</en><de>Was benötigen Sie? (Ware, Menge, Spezifikationen)</de><ar>ما الذي تحتاجه؟ (البضاعة، الكمية، المواصفات)</ar></span><textarea name="details"></textarea></label>
+      <div class="row2">
+        <label class="fld"><span><en>From (country / city)</en><de>Von (Land / Stadt)</de><ar>من (الدولة / المدينة)</ar></span><input name="from" type="text"></label>
+        <label class="fld"><span><en>To (country / city)</en><de>Nach (Land / Stadt)</de><ar>إلى (الدولة / المدينة)</ar></span><input name="to" type="text"></label>
+      </div></div>
+    <div class="wiz-pane"><h3><en>How can we reach you?</en><de>Wie erreichen wir Sie?</de><ar>كيف نتواصل معك؟</ar></h3>
+      <label class="fld"><span><en>Your name</en><de>Ihr Name</de><ar>اسمك</ar></span><input name="name" type="text" autocomplete="name"></label>
+      <div class="row2">
+        <label class="fld"><span><en>Email</en><de>E-Mail</de><ar>البريد الإلكتروني</ar></span><input name="email" type="email" autocomplete="email"></label>
+        <label class="fld"><span><en>Phone / WhatsApp</en><de>Telefon / WhatsApp</de><ar>الهاتف / واتساب</ar></span><input name="phone" type="tel" autocomplete="tel"></label>
+      </div>
+      <p class="hint"><en>Email or phone is enough.</en><de>E-Mail oder Telefon genügt.</de><ar>يكفي البريد أو الهاتف.</ar></p></div>
+    <div class="wiz-pane"><h3><en>Check and send</en><de>Prüfen und senden</de><ar>راجع وأرسل</ar></h3>
+      <dl class="sum" data-summary></dl>
+      <div class="send">
+        <a class="btn wa" data-send="wa-eg" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i><en>WhatsApp – Egypt</en><de>WhatsApp – Ägypten</de><ar>واتساب – مصر</ar></a>
+        <a class="btn wa" data-send="wa-de" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i><en>WhatsApp – Germany</en><de>WhatsApp – Deutschland</de><ar>واتساب – ألمانيا</ar></a>
+        <a class="btn-line" data-send="mail"><i class="bi bi-envelope"></i><en>Send by email</en><de>Per E-Mail senden</de><ar>أرسل بالبريد</ar></a>
+      </div></div>
+    <p class="wiz-err"><en>Please complete the required fields.</en><de>Bitte füllen Sie die Pflichtfelder aus.</de><ar>يرجى ملء الحقول المطلوبة.</ar></p>
+    <div class="wiz-nav">
+      <button type="button" class="btn-line" data-prev><en>Back</en><de>Zurück</de><ar>رجوع</ar></button>
+      <button type="button" class="btn" data-next><en>Next</en><de>Weiter</de><ar>التالي</ar></button>
+    </div>
+  </form>
+</section>
+
+<!-- ============ FREIGHT COMPARER (js/compare.js) ============ -->
+<section id="compare" class="sec">
+  <p class="eyebrow"><en>Freight tool</en><de>Fracht-Tool</de><ar>أداة الشحن</ar></p>
+  <h2><en>Which transport fits your shipment?</en><de>Welcher Transport passt zu Ihrer Sendung?</de><ar>أي وسيلة نقل تناسب شحنتك؟</ar></h2>
+  <p class="lead"><en>Pick your load and priority for an indicative comparison.</en><de>Wählen Sie Ladung und Priorität für einen unverbindlichen Vergleich.</de><ar>اختر الحمولة والأولوية لمقارنة استرشادية.</ar></p>
+  <div class="cmp" data-compare>
+    <div class="cmp-ctrl">
+      <div class="cmp-grp"><b><en>Load</en><de>Ladung</de><ar>الحمولة</ar></b>
+        <label class="chip"><input type="radio" name="load" value="item" checked><en>Single item</en><de>Einzelstück</de><ar>قطعة واحدة</ar></label>
+        <label class="chip"><input type="radio" name="load" value="container"><en>Full container</en><de>Voller Container</de><ar>حاوية كاملة</ar></label></div>
+      <div class="cmp-grp"><b><en>Priority</en><de>Priorität</de><ar>الأولوية</ar></b>
+        <label class="chip"><input type="radio" name="priority" value="fastest"><en>Fastest</en><de>Am schnellsten</de><ar>الأسرع</ar></label>
+        <label class="chip"><input type="radio" name="priority" value="balanced" checked><en>Balanced</en><de>Ausgewogen</de><ar>متوازن</ar></label>
+        <label class="chip"><input type="radio" name="priority" value="cheapest"><en>Cheapest</en><de>Am günstigsten</de><ar>الأوفر</ar></label></div>
+    </div>
+    <div class="cmp-res">
+      <div class="mode" data-mode="road"><i class="bi bi-truck"></i><div><h3><en>Road freight</en><de>Straßentransport</de><ar>النقل البري</ar></h3><p><en>Flexible and direct within and from Europe.</en><de>Flexibel und direkt innerhalb und ab Europa.</de><ar>مرن ومباشر داخل أوروبا ومنها.</ar></p></div><span><span class="tag ok"><en>Best fit</en><de>Beste Wahl</de><ar>الأنسب</ar></span><span class="tag no"><en>Not suitable</en><de>Ungeeignet</de><ar>غير مناسب</ar></span></span><div class="meters"><span><en>Speed</en><de>Tempo</de><ar>السرعة</ar></span><i class="m-sp"></i><span><en>Cost</en><de>Kosten</de><ar>التكلفة</ar></span><i class="m-co"></i><span><en>Fit</en><de>Eignung</de><ar>الملاءمة</ar></span><i class="m-fi"></i></div></div>
+      <div class="mode" data-mode="sea"><i class="bi bi-water"></i><div><h3><en>Sea freight</en><de>Seefracht</de><ar>الشحن البحري</ar></h3><p><en>Economical for large and heavy loads.</en><de>Wirtschaftlich für große und schwere Ladungen.</de><ar>اقتصادي للحمولات الكبيرة والثقيلة.</ar></p></div><span><span class="tag ok"><en>Best fit</en><de>Beste Wahl</de><ar>الأنسب</ar></span><span class="tag no"><en>Not suitable</en><de>Ungeeignet</de><ar>غير مناسب</ar></span></span><div class="meters"><span><en>Speed</en><de>Tempo</de><ar>السرعة</ar></span><i class="m-sp"></i><span><en>Cost</en><de>Kosten</de><ar>التكلفة</ar></span><i class="m-co"></i><span><en>Fit</en><de>Eignung</de><ar>الملاءمة</ar></span><i class="m-fi"></i></div></div>
+      <div class="mode" data-mode="air"><i class="bi bi-airplane"></i><div><h3><en>Air freight</en><de>Luftfracht</de><ar>الشحن الجوي</ar></h3><p><en>The fastest option for urgent, smaller shipments.</en><de>Die schnellste Option für eilige, kleinere Sendungen.</de><ar>أسرع خيار للشحنات العاجلة الأصغر حجمًا.</ar></p></div><span><span class="tag ok"><en>Best fit</en><de>Beste Wahl</de><ar>الأنسب</ar></span><span class="tag no"><en>Not suitable</en><de>Ungeeignet</de><ar>غير مناسب</ar></span></span><div class="meters"><span><en>Speed</en><de>Tempo</de><ar>السرعة</ar></span><i class="m-sp"></i><span><en>Cost</en><de>Kosten</de><ar>التكلفة</ar></span><i class="m-co"></i><span><en>Fit</en><de>Eignung</de><ar>الملاءمة</ar></span><i class="m-fi"></i></div></div>
+    </div>
+    <p class="cmp-note"><en>Indicative comparison only, not a quote. We confirm the real options for your shipment.</en><de>Nur ein unverbindlicher Vergleich, kein Angebot. Wir bestätigen die realen Optionen für Ihre Sendung.</de><ar>مقارنة استرشادية وليست عرض سعر. نؤكد لك الخيارات الفعلية لشحنتك.</ar></p>
+    <a href="#request" class="btn" data-service="3"><i class="bi bi-truck"></i><en>Request freight</en><de>Fracht anfragen</de><ar>اطلب الشحن</ar></a>
+  </div>
+</section>
+
+<!-- Process -->
+<section id="process" class="sec">
+  <p class="eyebrow"><en>International trade execution</en><de>Internationale Handelsabwicklung</de><ar>تنفيذ التجارة الدولية</ar></p>
+  <h2><en>From idea to delivery, we run every step</en><de>Von der Idee bis zur Lieferung – wir erledigen jeden Schritt</de><ar>من الفكرة إلى التسليم، ننفذ كل خطوة</ar></h2>
+
+  <div class="route">
+    <div class="rg"><h4><i class="bi bi-geo-alt-fill"></i> <en>Europe</en><de>Europa</de><ar>أوروبا</ar></h4>
+      <div class="chips"><span>Berlin</span><span>Paris</span><span>Rome</span><span>Madrid</span><span>London</span><span>Warsaw</span></div></div>
+    <div class="sea"><svg viewBox="0 0 400 60" aria-hidden="true"><path class="arc" d="M0 50 Q200 -30 400 50"/></svg><span class="ship">🚢</span></div>
+    <div class="rg"><h4><i class="bi bi-geo-alt-fill"></i> <en>Middle East</en><de>Naher Osten</de><ar>الشرق الأوسط</ar></h4>
+      <div class="chips"><span>Cairo</span><span>Dubai</span><span>Riyadh</span><span>Doha</span><span>Amman</span><span>Istanbul</span></div></div>
+  </div>
+
+  <div class="case"><i class="bi bi-buildings"></i><div>
+    <h3><en>Example</en><de>Beispiel</de><ar>مثال عملي</ar></h3>
+    <p><en>A company in Germany wants to import a product from Egypt. We run the whole process: finding the right supplier, shipping and delivery to their site.</en><de>Ein Unternehmen in Deutschland möchte ein Produkt aus Ägypten importieren. Wir übernehmen alles: Lieferant finden, Versand und Lieferung zum Standort.</de><ar>شركة في ألمانيا ترغب في استيراد منتج من مصر. ندير العملية بالكامل: المورد المناسب ثم الشحن والتسليم إلى مقر الشركة.</ar></p></div></div>
+
+  <ol class="steps">
+    <li><i class="bi bi-clipboard-check"></i><b><en>Client request</en><de>Kundenanfrage</de><ar>طلب العميل</ar></b></li>
+    <li><i class="bi bi-shield-check"></i><b><en>Review &amp; research</en><de>Prüfung &amp; Recherche</de><ar>دراسة وبحث</ar></b></li>
+    <li><i class="bi bi-chat-square-heart"></i><b><en>Negotiation</en><de>Verhandlung</de><ar>التفاوض والاتفاق</ar></b></li>
+    <li class="on"><i class="bi bi-truck"></i><b><en>Shipping</en><de>Versand</de><ar>التنفيذ والشحن</ar></b></li>
+    <li><i class="bi bi-house-check"></i><b><en>Delivery</en><de>Lieferung</de><ar>التسليم والمتابعة</ar></b></li>
+  </ol>
+
+  <h3 class="sub"><en>Why our service</en><de>Unsere Stärken</de><ar>مميزات خدمتنا</ar></h3>
+  <ul class="feats">
+    <li><i class="bi bi-globe"></i><en>Global network</en><de>Globales Netzwerk</de><ar>شبكة عالمية واسعة</ar></li>
+    <li><i class="bi bi-person-workspace"></i><en>Expert team</en><de>Erfahrenes Team</de><ar>فريق متخصص ذو خبرة</ar></li>
+    <li><i class="bi bi-geo-alt"></i><en>Live shipment tracking</en><de>Live-Sendungsverfolgung</de><ar>متابعة لحظية للشحنات</ar></li>
+    <li><i class="bi bi-clock-history"></i><en>On-time commitment</en><de>Termintreue</de><ar>التزام كامل بالمواعيد</ar></li>
+  </ul>
+  <a href="#request" class="btn wide"><i class="bi bi-send"></i><en>Start your request now</en><de>Jetzt Anfrage starten</de><ar>ابدأ طلب الخدمة الآن</ar></a>
+</section>
+
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="sec">
+  <p class="eyebrow"><en>Contact</en><de>Kontakt</de><ar>تواصل معنا</ar></p>
+  <h2><en>Talk to us directly</en><de>Sprechen Sie direkt mit uns</de><ar>تحدث معنا مباشرة</ar></h2>
+  <p class="lead"><en>Reach our team by phone, WhatsApp or email – in English, German or Arabic.</en><de>Erreichen Sie unser Team per Telefon, WhatsApp oder E-Mail – auf Englisch, Deutsch oder Arabisch.</de><ar>تواصل مع فريقنا بالهاتف أو واتساب أو البريد – بالإنجليزية أو الألمانية أو العربية.</ar></p>
+  <div class="team">
+    <div class="person"><span class="avatar" aria-hidden="true">AI</span><div>
+      <h3>Ahmed Issa</h3><p class="role"><en>Founder &amp; Managing Director (Geschäftsführer)</en><de>Gründer &amp; Geschäftsführer</de><ar>المؤسس والمدير العام</ar></p>
+      <div class="acts"><a class="act" href="mailto:clicktrade_yis@outlook.com"><i class="bi bi-envelope"></i>clicktrade_yis@outlook.com</a></div></div></div>
+    <div class="person"><span class="avatar" aria-hidden="true">MI</span><div>
+      <h3>Mahmoud Issa</h3><p class="role"><en>Sales Point Manager &amp; Contact Person – Egypt</en><de>Sales Point Manager &amp; Ansprechpartner – Ägypten</de><ar>مدير نقطة المبيعات وجهة الاتصال – مصر</ar></p>
+      <div class="acts"><a class="act" href="tel:+201093488025"><i class="bi bi-telephone"></i><bdi>+20 109 348 8025</bdi></a>
+        <a class="act" data-wa="201093488025" href="https://wa.me/201093488025" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i>WhatsApp</a></div></div></div>
+  </div>
+  <h3 class="sub-title"><en>Company WhatsApp lines</en><de>WhatsApp-Leitungen des Unternehmens</de><ar>خطوط واتساب للشركة</ar></h3>
+  <div class="wa-grid">
+    <!-- To change a number: edit data-wa (digits only, with country code) and the visible text -->
+    <a class="wa-card" data-wa="201060413413" href="https://wa.me/201060413413" target="_blank" rel="noopener">
+      <i class="bi bi-whatsapp"></i><div><b><en>Egypt line</en><de>Ägypten</de><ar>خط مصر</ar></b><span>+20 106 041 3413</span></div><span class="wa-go"><en>Chat</en><de>Chat</de><ar>محادثة</ar></span></a>
+    <a class="wa-card" data-wa="4917670639509" href="https://wa.me/4917670639509" target="_blank" rel="noopener">
+      <i class="bi bi-whatsapp"></i><div><b><en>Germany line</en><de>Deutschland</de><ar>خط ألمانيا</ar></b><span>+49 176 7063 9509</span></div><span class="wa-go"><en>Chat</en><de>Chat</de><ar>محادثة</ar></span></a>
+  </div>
+
+  <form class="mailbox" data-mailform>
+    <h3 class="sub-title" style="margin-top:0"><en>Or send us an email</en><de>Oder schreiben Sie uns eine E-Mail</de><ar>أو أرسل لنا بريدًا إلكترونيًا</ar></h3>
+    <div class="row2">
+      <label class="fld"><span><en>Your name</en><de>Ihr Name</de><ar>اسمك</ar></span><input name="name" type="text" required autocomplete="name"></label>
+      <label class="fld"><span><en>Your email</en><de>Ihre E-Mail</de><ar>بريدك الإلكتروني</ar></span><input name="email" type="email" required autocomplete="email"></label>
+    </div>
+    <div class="chips-row"><label class="chip"><input type="radio" name="topic" data-en="Business Development" data-de="Geschäftsentwicklung" data-ar="تطوير الأعمال"><en>Business Development</en><de>Geschäftsentwicklung</de><ar>تطوير الأعمال</ar></label><label class="chip"><input type="radio" name="topic" data-en="Sourcing & Procurement" data-de="Beschaffung & Einkauf" data-ar="التوريد والمشتريات"><en>Sourcing &amp; Procurement</en><de>Beschaffung &amp; Einkauf</de><ar>التوريد والمشتريات</ar></label><label class="chip"><input type="radio" name="topic" data-en="Freight & Transport" data-de="Fracht & Transport" data-ar="الشحن والنقل"><en>Freight &amp; Transport</en><de>Fracht &amp; Transport</de><ar>الشحن والنقل</ar></label><label class="chip"><input type="radio" name="topic" data-en="Customs Clearance" data-de="Zollabfertigung" data-ar="التخليص الجمركي"><en>Customs Clearance</en><de>Zollabfertigung</de><ar>التخليص الجمركي</ar></label><label class="chip"><input type="radio" name="topic" data-en="Payment Solutions" data-de="Zahlungslösungen" data-ar="حلول الدفع"><en>Payment Solutions</en><de>Zahlungslösungen</de><ar>حلول الدفع</ar></label></div>
+    <label class="fld"><span><en>Message</en><de>Nachricht</de><ar>الرسالة</ar></span><textarea name="message" required></textarea></label>
+    <input class="hp" name="botcheck" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <button type="submit" class="btn"><i class="bi bi-send"></i><en>Send message</en><de>Nachricht senden</de><ar>إرسال الرسالة</ar></button>
+    <p class="msg ok"><en>Thank you – your message was sent.</en><de>Danke – Ihre Nachricht wurde gesendet.</de><ar>شكرًا – تم إرسال رسالتك.</ar></p>
+    <p class="msg err"><en>Sending failed. Please email us directly or use WhatsApp.</en><de>Senden fehlgeschlagen. Bitte schreiben Sie uns direkt oder nutzen Sie WhatsApp.</de><ar>تعذّر الإرسال. راسلنا مباشرة أو استخدم واتساب.</ar></p>
+    <p class="msg mail"><en>Your email app should open with the message ready.</en><de>Ihre E-Mail-App sollte mit der fertigen Nachricht öffnen.</de><ar>سيفتح تطبيق البريد والرسالة جاهزة.</ar></p>
+  </form>
+  <p class="mail-line"><en>Email:</en><de>E-Mail:</de><ar>البريد:</ar> <a href="mailto:clicktrade_yis@outlook.com">clicktrade_yis@outlook.com</a></p>
+</section>
+
+<footer class="ftr"><p>&copy; 2025 ClickTradE <span class="red">Y.I.S</span> · <a href="mailto:clicktrade_yis@outlook.com">clicktrade_yis@outlook.com</a> · <en>All rights reserved.</en><de>Alle Rechte vorbehalten.</de><ar>جميع الحقوق محفوظة.</ar></p></footer>
+
+<a href="#contact" class="wa-float" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+
+<script src="js/hero.js"></script>
+<script src="js/services.js"></script>
+<script src="js/config.js"></script>
+<script src="js/wizard.js"></script>
+<script src="js/compare.js"></script>
+<script src="js/contact-form.js"></script>
+</body>
+</html>

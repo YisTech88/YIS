@@ -1,0 +1,63 @@
+/* ==========================================================================
+   HERO - headline + interactive shipment console (driven by js/hero.js)
+   ========================================================================== */
+.hero{position:relative;min-height:100vh;padding:calc(var(--header-h) + 50px) 24px 60px;display:flex;align-items:center;overflow:hidden;
+  background:radial-gradient(ellipse 60% 70% at 70% 45%,color-mix(in srgb,var(--accent) 16%,transparent),transparent 70%),var(--bg)}
+.hero-bg{position:absolute;inset:0;pointer-events:none;opacity:.45;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:60px 60px;-webkit-mask-image:radial-gradient(ellipse at 60% 40%,#000 10%,transparent 70%);mask-image:radial-gradient(ellipse at 60% 40%,#000 10%,transparent 70%)}
+.hero-grid{position:relative;max-width:1200px;width:100%;margin:auto;display:grid;grid-template-columns:1fr 1.15fr;gap:48px;align-items:center}
+
+/* ---- text side ---- */
+.hero-txt{text-align:start;animation:rise 1s both}
+.badge{display:inline-flex;gap:8px;align-items:center;margin-bottom:18px;padding:4px 14px;border:1px solid var(--line);border-radius:20px;font-size:.8rem;color:var(--mut)}
+.badge i{color:var(--accent)}
+.hero h1{font-size:clamp(2.2rem,4.4vw,3.8rem);font-weight:800;line-height:1.15;margin-bottom:16px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero-txt>p{max-width:520px;margin-bottom:26px;color:var(--mut)}
+.actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.facts{display:flex;gap:30px;margin-top:34px}
+.facts b{display:block;font-size:1.9rem;line-height:1.1}
+.facts span{color:var(--mut);font-size:.8rem}
+
+/* ---- console (always dark, whatever the theme) ---- */
+.console{padding:16px;border:1px solid #232b3b;border-radius:18px;color:#e6edf5;animation:rise 1s .2s both;
+  background:linear-gradient(160deg,#0e131d,#070a11);box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.console-top{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin-bottom:12px}
+.console-title{display:flex;gap:8px;align-items:center;font-size:.78rem;color:#98a3b5}
+.live-dot{width:8px;height:8px;border-radius:50%;background:#2ee59d;animation:ping 1.8s ease-out infinite}
+.goods{display:flex;gap:6px}
+.goods button{font:inherit;font-size:.78rem;padding:3px 12px;border-radius:20px;border:1px solid #2b3345;background:transparent;color:#c5cfdd;cursor:pointer;transition:.25s}
+.goods button:hover{border-color:var(--accent)}
+.goods button[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+
+.console-map{display:block;width:100%;border-radius:12px;background:radial-gradient(ellipse at 50% 60%,#0d2230,#05080d)}
+.route-base{fill:none;stroke:#35506a;stroke-width:2;stroke-dasharray:4 7}
+.route-trail{fill:none;stroke:var(--accent);stroke-width:3;stroke-linecap:round;filter:drop-shadow(0 0 6px var(--accent))}
+.city{fill:var(--warm)}
+.city-label{fill:#dbe7f2;font-size:14px;font-weight:600;paint-order:stroke;stroke:#05080d;stroke-width:3px}
+.marker-core{fill:var(--accent);stroke:#fff;stroke-width:2}
+.marker-ring{fill:var(--accent);transform-box:fill-box;transform-origin:center;animation:ring 1.6s ease-out infinite}
+
+/* progress steps */
+.track{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;margin-top:14px}
+.track li{position:relative;display:grid;justify-items:center;gap:4px;font-size:.7rem;color:#8896aa;cursor:pointer;text-align:center}
+.track li:not(:first-child)::before{content:"";position:absolute;top:17px;inset-inline-start:-50%;width:100%;height:2px;background:#26303f;transition:.5s}
+.track i{position:relative;z-index:1;width:36px;height:36px;display:grid;place-items:center;border-radius:50%;font-size:1rem;background:#0b0f17;border:1px solid #2b3345;transition:.4s}
+.track .done i{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.track .done::before,.track .active::before{background:var(--accent)}
+.track .active{color:#fff}
+.track .active i{border-color:var(--accent);color:var(--accent);box-shadow:0 0 18px var(--accent)}
+
+/* per-goods description */
+.goods-info{display:none;margin-top:12px;font-size:.82rem;color:#b7c3d3}
+.console[data-goods=vehicles] .goods-info.vehicles,
+.console[data-goods=machinery] .goods-info.machinery,
+.console[data-goods=equipment] .goods-info.equipment{display:block}
+.demo-note{margin-top:6px;font-size:.7rem;color:#6d7b8f}
+
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(46,229,157,.6)}100%{box-shadow:0 0 0 9px rgba(46,229,157,0)}}
+@keyframes ring{from{transform:scale(1);opacity:.6}to{transform:scale(3.4);opacity:0}}
+
+@media(max-width:960px){.hero-grid{grid-template-columns:1fr}.hero{min-height:0}}
+@media(max-width:520px){.track{font-size:.62rem}.track i{width:30px;height:30px}.track li:not(:first-child)::before{top:14px}.facts{gap:18px}}
